@@ -4,3 +4,27 @@
 #   3+8+5=9+1+6. Вам требуется написать программу, которая проверяет счастливость билета.
 # 385916 -> yes
 # 123456 -> no
+flag = True
+while flag:
+    sum1 = 0
+    sum2 = 0
+    count1 = 0
+    ticket = int(input("Введите шестизначный номер билета -> "))
+    if 1000000 <= ticket < 10000000:
+        while count1 <= 3:
+            sum1 += ticket % 10
+            ticket //= 10
+        while ticket != 0:
+            sum2 += ticket % 10
+            ticket //= 10
+        if sum1 == sum2:
+            print("YES")
+        else:
+            print("NO")
+    else:
+        print("Вы ввели не шестизначное число :(")
+    answer = input("Вы хотите продолжить? Если да, введите 'да', иначе 'нет' -> ")
+    if answer.lower() == 'да':
+        flag = True
+    else:
+        flag = False
