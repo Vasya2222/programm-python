@@ -5,3 +5,13 @@
 # 6 -> 1 4 1
 # 24 -> 4 16 4
 # 60 -> 10 40 10
+
+flag = True
+while flag:
+    s = int(input("Введите число -> "))
+    print((s // 3) // 2, s - (s // 3), (s // 3) // 2)
+    answer = input("Вы хотите продолжить? Если да, введите 'да', иначе 'нет' -> ")
+    if answer.lower() == 'да':
+        flag = True
+    else:
+        flag = False
