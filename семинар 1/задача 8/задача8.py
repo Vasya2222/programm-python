@@ -3,3 +3,12 @@
 # два прямоугольника).
 # 3 2 4 -> yes
 # 3 2 1 -> no
+
+n,m,k = int(input("Введите число -> ")), int(input("Введите число -> ")), int(input("Введите число -> "))
+if n*m>k:
+    if k%n==0 or k%m==0:
+        print('YES')
+    else:
+        print('NO')
+else:
+    print('NO')
