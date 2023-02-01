@@ -5,11 +5,18 @@
 # 4 4 -> 2 2
 # 5 6 -> 2 3
 
-x, y = int(input("Введите число -> ")), int(input("Введите число -> "))
+flag = True
+while flag:
+    x, y = int(input("Введите число -> ")), int(input("Введите число -> "))
 
-
-for i in range(x + y):
-    for j in range(x + y):
-        if i + j == x and i * j == y:
-            print(i, j)
-            break
+    for i in range(x + y):
+        for j in range(x + y):
+            if i + j == x and i * j == y:
+                print(i, j)
+                break
+            
+    answer = input("Вы хотите продолжить? Если да, введите 'да', иначе 'нет' -> ")
+    if answer.lower() == 'да':
+        flag = True
+    else:
+        flag = False
