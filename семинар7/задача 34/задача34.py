@@ -17,20 +17,15 @@ def param_pam_pam(massege: str) -> str:
     flag = True
     massege = massege.lower().split()
     key_num = 0
-    print(massege)
     vowels = set("аоеиюэяуыё")
     for i in massege:
         count = 0
         for j in i:
-            print(j)
             if j in vowels:
                 dict1[key_num] = count + 1
                 count += 1
-                print(count)
-            #elif  j in "аоеиюэяуыё":
-            #    dict1[key_num] = count + 1
         key_num += 1
-    print(dict1)
+
     for i in range(len(dict1) - 1):
         if dict1[i + 1] == dict1[i]:
             flag = True
